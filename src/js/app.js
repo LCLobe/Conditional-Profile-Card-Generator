@@ -48,22 +48,30 @@ function render(variables = {}) {
           <li><a href=${
             variables.twitter === null
               ? "https://twitter.com/4geeksacademy"
-              : "https://twitter.com/" + variables.twitter
+              : "https://twitter.com/" +
+                variables.twitter +
+                ' style="color:black;"'
           }><i class="fab fa-twitter"></i></a></li>
             <li><a href= ${
               variables.github === null
                 ? "https://github.com/4geeksacademy"
-                : "https://github.com/" + variables.github
+                : "https://github.com/" +
+                  variables.github +
+                  ' style="color:black;"'
             } "https://github.com/4geeksacademy"><i class="fab fa-github"></i></a></li>
             <li><a href=  ${
               variables.linkedin === null
                 ? "https://linkedin.com/4geeksacademy"
-                : "https://linkedin.com/" + variables.linkedin
+                : "https://linkedin.com/" +
+                  variables.linkedin +
+                  ' style="color:black;"'
             }><i class="fab fa-linkedin"></i></a></li>
             <li><a href= ${
               variables.instagram === null
                 ? "https://instagram.com/4geeksacademy"
-                : "https://instagram.com/" + variables.instagram
+                : "https://instagram.com/" +
+                  variables.instagram +
+                  ' style="color:black;"'
             }><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
