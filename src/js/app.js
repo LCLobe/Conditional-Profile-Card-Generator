@@ -76,6 +76,28 @@ function render(variables = {}) {
           </ul>
         </div>
     `;
+  //Remove "input" from JS
+  try {
+    document
+      .querySelectorAll("select option:first-of-type")
+      .forEach(element => {
+        if (element.innerText === "null") element.innerText = "";
+      });
+  } catch (err) {
+    console.log("This is the cath error: ", err);
+  }
+  //Reset "include cover" from JS
+  try {
+    const selectIncludeCover = document.querySelector(
+      `select[for="includeCover"]`
+    );
+    // const selectIncludeCover = document.querySelector(`select:first-of-type`);
+
+    selectIncludeCover.innerHTML = `<option value="true">True</option>
+       <option value="false">False</option>`;
+  } catch (err) {
+    console.log("This is the cath2 error: ", err);
+  }
 }
 
 /**
@@ -93,7 +115,7 @@ window.onload = function() {
     socialMediaPosition: "position-left",
     // social media usernames
     twitter: null,
-    github: "alesanchezr",
+    github: "LCLobe",
     linkedin: null,
     instagram: null,
     name: null,
